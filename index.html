@@ -1,34 +1,40 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>NUNHA FINANCE</title>
-  
-  <!-- Baris ini memanggil manifest agar bisa jadi aplikasi -->
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#ffffff">
-  
-  <style>
-    /* CSS ini membuat iframe memenuhi seluruh layar HP/Desktop tanpa sisa */
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden;
-    }
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      display: block;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#ffffff">
+    <title>Nunha Fin</title>
+
+    <!-- ICON PILIHAN ANDA -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/9139/9139457.png">
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/9139/9139457.png">
+
+    <!-- MANIFEST DINAMIS -->
+    <script>
+        const manifest = {
+            "name": "Nunha Fin",
+            "short_name": "NunhaFin",
+            "start_url": ".",
+            "display": "standalone",
+            "background_color": "#ffffff",
+            "theme_color": "#ffffff",
+            "icons": [{"src": "https://cdn-icons-png.flaticon.com/512/9139/9139457.png","sizes": "512x512","type": "image/png"}]
+        };
+        const blob = new Blob([JSON.stringify(manifest)], {type: 'application/json'});
+        const manifestURL = URL.createObjectURL(blob);
+        document.write('<link rel="manifest" href="'+manifestURL+'">');
+    </script>
+
+    <style>
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background-color: #ffffff; }
+        iframe { border: none; width: 100%; height: 100vh; display: block; }
+    </style>
 </head>
 <body>
-  
-  <!-- GANTI DENGAN URL GOOGLE APPS SCRIPT ANDA -->
-  <iframe src="https://script.google.com/macros/s/AKfycbx0QNY3f0K62Hb5U8kxD08yCIb53wsEJaZNXwvpbvBbpxLVOlbfDSsbj7w1OmJ3744Z/exec"></iframe>
-
+    <!-- URL GOOGLE APPS SCRIPT ANDA -->
+    <iframe src="https://script.google.com/macros/s/AKfycbx0QNY3f0K62Hb5U8kxD08yCIb53wsEJaZNXwvpbvBbpxLVOlbfDSsbj7w1OmJ3744Z/exec"></iframe>
 </body>
 </html>
