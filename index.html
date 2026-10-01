@@ -6,8 +6,8 @@
     <meta name="theme-color" content="#ffffff">
     <title>Nunha Fin</title>
     
-    <!-- Memanggil file manifest -->
-    <link rel="manifest" href="manifest.json">
+    <!-- PERHATIKAN: Ada tambahan ?v=99 di sini untuk memaksa Chrome membaca file baru -->
+    <link rel="manifest" href="manifest.json?v=99">
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/9139/9139457.png">
     <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/9139/9139457.png">
     
@@ -28,20 +28,19 @@
         right: 0;
         border: none; 
         width: 100%; 
-        height: 100%; /* Mengikuti tinggi layar penuh */
+        height: 100%; 
         display: block; 
     }
-</style>
+    </style>
 </head>
 <body>
-    <!-- URL GAS ANDA -->
     <iframe src="https://script.google.com/macros/s/AKfycbx0QNY3f0K62Hb5U8kxD08yCIb53wsEJaZNXwvpbvBbpxLVOlbfDSsbj7w1OmJ3744Z/exec"></iframe>
 
-    <!-- Wajib ada untuk mendaftarkan Service Worker -->
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('sw.js')
+                // PERHATIKAN: Ada tambahan ?v=99 juga di sini
+                navigator.serviceWorker.register('sw.js?v=99')
                 .then(reg => console.log('Service Worker sukses terdaftar!'))
                 .catch(err => console.error('Service Worker error:', err));
             });
