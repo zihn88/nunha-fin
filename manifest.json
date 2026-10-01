@@ -1,7 +1,8 @@
 {
   "name": "Nunha Fin",
   "short_name": "NunhaFin",
-  "start_url": "./index.html",
+  "start_url": "/nunha-fin/",
+  "scope": "/nunha-fin/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
