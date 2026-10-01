@@ -1,13 +1,13 @@
 {
-  "name": "Nama Aplikasi",
-  "short_name": "App",
+  "name": "NUNHA FINANCE",
+  "short_name": "NunhaFin",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
   "icons": [
     {
-      "src": "https://cdn-icons-png.flaticon.com/512/732/732221.png", 
+      "src": "https://cdn-icons-png.flaticon.com/512/9139/9139457.png", 
       "sizes": "512x512",
       "type": "image/png"
     }
